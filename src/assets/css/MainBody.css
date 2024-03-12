@@ -1,0 +1,82 @@
+.home-body{
+   padding-top: 70px;
+}
+.trailer-body{
+   position: relative;
+   height: 750px;
+   z-index: 0; 
+   width: 100%;
+   padding-left: 7%;
+   padding-right: 7%;
+   padding-bottom: 25%;
+   text-align: center;
+}
+.movie-details{
+padding-top: 8%;
+margin-left: 7%;
+margin-right:7%;
+}
+.main-movie-details{
+   padding: 5% 4% 3% 4%;
+   flex-direction: row;
+   justify-content: space-between;
+   background-color: #040404cb ;
+   box-shadow: 0 0 1000px rgba(0, 0, 0, 0.7);
+}
+.movie-image-body{
+   width: 40%;
+   margin-right: 5%;
+   z-index: 0; 
+   text-align: center;
+}
+.movie-details-image{
+   height: 100%;
+   width: 100%;
+}
+.movie-others-body{
+   width: 60%;
+   text-align: justify;
+}
+.normal-body{
+   position: relative;
+   height: 300px;
+   z-index: 0; 
+   width: 100%;
+   padding-left: 7%;
+   padding-right: 7%;
+   padding-bottom: 30%;
+   text-align: center;  
+}
+.normal-img:hover{
+   opacity: 0.5;
+   box-shadow: 0 0 100px rgba(0, 0, 0, 0.6);
+}
+
+.normal-img{
+   object-fit: cover;
+   height: 100%;
+   width: 100%;
+}
+.trailer-img{
+   object-fit: cover;
+   height: 100%;
+   width: 100%;
+}
+.trailer-play{
+   display: none;
+padding-left: 30%;
+padding-top: 50%;
+font-size: 5.4rem;
+}
+.trailer-body:hover{
+   .trailer-play{
+      display: block;  
+   }
+}
+.watch-trailer{
+   margin-left: -7%;
+}
+.carousel .react-multi-carousel-list .react-multi-carousel-item--active {
+   transform: scale(1.2); /* Adjust the scale factor based on your preference */
+   transition: transform 0.3s ease-in-out;
+ }

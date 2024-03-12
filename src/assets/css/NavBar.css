@@ -1,0 +1,24 @@
+.navbar{
+   z-index: 10;
+}
+.gradient-text{
+   background: linear-gradient(to right,white, goldenrod, goldenrod); /* Replace these colors with your desired gradient stops */
+   background-clip: text;
+   color: transparent; /* Make the text transparent so that the gradient background shows through */ 
+}
+.headlink{
+   text-decoration: none !important;
+   color: white;
+}
+.headlink:hover{
+   color: rgba(255, 255, 255, 0.634);
+}
+.btn{
+   margin-top: -1.5% !important;
+}
+.subscribe-box{
+   border-width: 2px; /* Set your desired border width */
+  border-style: solid;
+   border-image: linear-gradient(to right, white,goldenrod,white); /* Replace these colors with your desired gradient stops */
+   border-image-slice: 1;
+}
