@@ -11,7 +11,8 @@ export const AuthProvider=({children})=>{
    const[boxOffice,setBoxoffice]=useState([]);
    const[movieGenre,setGenre]=useState("thriller");
    const[movieGenreItems,setGenreItems]=useState([]);
-   useEffect(()=>{  
+   const [searchItem,setSearch] =useState("");
+   useEffect(()=>{ 
       const urltrailer = 'https://moviesverse1.p.rapidapi.com/get-trending-trailers';
       const urlpopular = 'https://moviesverse1.p.rapidapi.com/most-popular-movies';
       const urltophundred='https://moviesverse1.p.rapidapi.com/top-250-movies';
@@ -176,7 +177,7 @@ export const AuthProvider=({children})=>{
   getTrailer();
     },[movieGenre]);
 return(
-   <AuthContext.Provider value={{itemDetails,setItemDetails,trendTrailer,popularMovie,topMovie,biographyMovie,actionMovie,horrorMovie,boxOffice,setGenre,movieGenre,movieGenreItems}}>
+   <AuthContext.Provider value={{itemDetails,setItemDetails,trendTrailer,popularMovie,topMovie,biographyMovie,actionMovie,horrorMovie,boxOffice,setGenre,movieGenre,movieGenreItems,searchItem,setSearch}}>
       {children}
    </AuthContext.Provider>
 )

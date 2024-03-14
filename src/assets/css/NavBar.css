@@ -1,6 +1,6 @@
 .navbar{
    z-index: 10;
-   background-color: #212c38;;
+   background-color: black;
 }
 .gradient-text{
    background: linear-gradient(to right,white, goldenrod, goldenrod); /* Replace these colors with your desired gradient stops */
@@ -40,3 +40,4 @@
    background-color: rgb(220, 53, 69,0.8);
    cursor:pointer;
 }
+

@@ -6,7 +6,7 @@ export default function MovieDetails() {
     <div className='movie-details'>
       <div className='main-movie-details d-flex rounded'> 
       <div className='movie-image-body'>
-         <img className='movie-details-image rounded' src={itemDetails.posterImage} alt="" />
+         <img className='movie-details-image rounded' src={itemDetails.posterImage||itemDetails.image} alt="" />
       </div>
       <div className='movie-others-body text-white'>
         <p className='fs-1 fw-bolder'>MOVIE TITLE:- {itemDetails.title}</p>

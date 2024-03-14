@@ -44,3 +44,7 @@
    background-color: white !important;
    color: #021c2a !important;
 }
+.nomovie{
+grid-column-start: 1;
+grid-column-end: 5;
+}

@@ -6,8 +6,17 @@ import { useNavigate } from 'react-router-dom';
 // import Logo from "../assets/pictures/movie-mafia-logo2.jpg";
 export default function NavBar() {
   const direct=useNavigate();
-  const {setGenre}=useAuth();
+  const {setGenre,setSearch}=useAuth();
   const [isHovered, setIsHovered] = useState(false);
+  // const searchedText =(e)=>{
+  //   setSearch(e.target.value);
+  // }
+  const handleChange = (e)=>{
+    setSearch(e.target.value);
+  }
+  const handleFocus=()=>{
+    direct("search");
+  }
   return (
     <>
     <div className='navbar d-flex text-center flex-column position-fixed w-100 pt-0'>
@@ -27,11 +36,10 @@ export default function NavBar() {
         <HeadLink setIsHovered={setIsHovered}/>
         </div> 
         <div className="subbox align-self-center w-25">
-          <input className=' p-1 w-75 rounded mt-1 me-1' type="text" placeholder='Search Movies,Shows and More'/>
-           <button className='btn btn-danger fw-bold rounded p-1'>Search</button>
+          <input className=' p-1 w-75 rounded mt-1 me-1' onFocus={handleFocus} onChange={handleChange} type="text" placeholder='Search Movies,Shows and More'/>
+           <button  className='btn btn-danger fw-bold rounded p-1'>Search</button>
         </div>
-      </div>
-      
+      </div>    
     </div>
     {isHovered && (<div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className='bg-black text-white rounded more-box position-absolute ps-2 pe-2 pb-2 pt-5'>
     <ul className='d-flex flex-wrap fw-bolder'>
