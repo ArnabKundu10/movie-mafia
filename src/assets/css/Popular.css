@@ -34,3 +34,13 @@
 .btn-container ul li{
    list-style: none;
 }
+.movie-genre{
+   padding-top: 14%;
+}
+.carausel-btn{
+   border: 2px solid white;
+}
+.carausel-btn:hover{
+   background-color: white !important;
+   color: #021c2a !important;
+}

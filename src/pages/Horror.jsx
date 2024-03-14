@@ -3,15 +3,15 @@ import { useAuth } from '../store/auth'
 import "../assets/css/Popular.css"
 import { useNavigate } from 'react-router-dom';
 
-export default function Action() {
-  const {actionMovie,setItemDetails}=useAuth();
+export default function Horror() {
+  const {horrorMovie,setItemDetails}=useAuth();
   const[curPage,setCurPage]=useState(1);
   const direct=useNavigate();
   const e=curPage*8;
   const s=e-8;
-  const totalContents=actionMovie?.slice(s,e);
+  const totalContents=horrorMovie?.slice(s,e);
   const pageNumbers=[];
-  const n=Math.ceil(actionMovie?.length / 8);
+  const n=Math.ceil(horrorMovie?.length / 8);
   for(let i=1;i<= n;i++){
     pageNumbers.push(i);
   }

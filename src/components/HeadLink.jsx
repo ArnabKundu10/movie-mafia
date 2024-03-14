@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-export default function HeadLink() {
+export default function HeadLink({setIsHovered}) {
    const[curhead,setcurhead]=useState(0);
    const bgheadlink=(index)=>{
 if(index===curhead){
@@ -27,13 +27,13 @@ else{
       <NavLink onClick={()=>{setcurhead(2)}} style={bgheadlink(2)} className="headlink pt-2 pb-3 ps-2 pe-2  fs-5 me-3" to="/action">
          Action
       </NavLink>
-      <NavLink onClick={()=>{setcurhead(3)}} style={bgheadlink(3)} className="headlink pt-2 pb-3   ps-2 pe-2 fs-5 me-3" to="/comedy">
-         Comedy
+      <NavLink onClick={()=>{setcurhead(3)}} style={bgheadlink(3)} className="headlink pt-2 pb-3   ps-2 pe-2 fs-5 me-3" to="/horror">
+         Horror
       </NavLink>
       <NavLink onClick={()=>{setcurhead(4)}} style={bgheadlink(4)} className="headlink pt-2 pb-3   ps-2 pe-2 fs-5 me-3" to="/news">
          News
       </NavLink>
-      <NavLink onClick={()=>{setcurhead(5)}} style={bgheadlink(5)} className="headlink pt-2 pb-3   ps-2 pe-2 fs-5 me-3" to="/news">
+      <NavLink onClick={()=>{setcurhead(5)}} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} style={bgheadlink(5)} className="headlink pt-2 pb-3   ps-2 pe-2 fs-5 me-3" to="/more">
          More
       </NavLink>
     </>    

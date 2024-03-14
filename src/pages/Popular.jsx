@@ -45,21 +45,23 @@ export default function Popular() {
           } 
        </div>
        <div className='btn-container'>
-          
-          <ul className='d-flex flex-row'>
-            <li className='prev-btn'>
-             <button onClick={previousPage} disabled={curPage===1} className='p-4 m-2 fs-5 fw-bold '>prev</button> 
-            </li>
+        <div className='d-flex justify-content-center'>
+         <div className='prev-btn'>
+             <button onClick={previousPage} disabled={curPage===1} className='p-2 m-1 fs-5 fw-bold '>prev</button> 
+            </div>
+          <ul className='d-flex flex-row flex-wrap ms-0 ps-0'>
             {pageNumbers?.map((num,index)=>{
               return(
               <li key={index}>
-                <button className='p-4 m-2 fs-5 fw-bold' style={btnColorChange(num)} onClick={()=>{setCurPage(num)}}>{num}</button>
+                <button className='p-2 m-1 fs-5 fw-bold' style={btnColorChange(num)} onClick={()=>{setCurPage(num)}}>{num}</button>
               </li>)
             })}
-            <li className='next-btn' >
-              <button className='p-4 m-2 fs-5 fw-bold ' onClick={nextPage} disabled={curPage===n}>next</button>
-             </li>
+            
           </ul>
+            <div className='next-btn' >
+              <button className='p-2 m-1 fs-5 fw-bold ' onClick={nextPage} disabled={curPage===n}>next</button>
+             </div>
+             </div>
        </div>
     </div>
   )
