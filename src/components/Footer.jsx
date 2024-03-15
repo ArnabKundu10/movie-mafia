@@ -31,10 +31,10 @@ export default function Footer() {
          </div>
          <div>
          <p className='fs-5 fw-bolder'>Connect With Us</p>
-         <a href="#"><i class="fa-brands fa-facebook fs-2 m-2 text-white"></i></a>
-         <a href="#"><i class="fa-brands fa-instagram fs-2 m-2 text-white"></i></a>
-         <a href="#"><i class="fa-brands fa-twitter fs-2 m-2 text-white"></i></a>
-         <a href="#"><i class="fa-brands fa-github fs-2 m-2 text-white"></i></a>
+         <a href="www.facebook.com"><i class="fa-brands fa-facebook fs-2 m-2 text-white"></i></a>
+         <a href="www.facebook.com"><i class="fa-brands fa-instagram fs-2 m-2 text-white"></i></a>
+         <a href="www.facebook.com"><i class="fa-brands fa-twitter fs-2 m-2 text-white"></i></a>
+         <a href="www.facebook.com"><i class="fa-brands fa-github fs-2 m-2 text-white"></i></a>
          </div>
       </div>
       <div className="footer-subcontainer">
