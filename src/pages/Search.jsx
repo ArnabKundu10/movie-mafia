@@ -9,12 +9,12 @@ export default function Search() {
    setItemDetails(item)
    direct("/movie-details");
    }
-   const filteredMovies=popularMovie?.filter((item)=>item.title.toLowerCase().includes(searchItem));
+   const filteredMovies=popularMovie?.filter((item)=>item.title.toLowerCase().includes(searchItem.toLowerCase()));
   return (
     <>
     <div className='pt-4 text-center'>
      {searchItem===""?
-     <div className='text-white fs-1 fw-bolder mt-5 pt-5'>
+     <div className='search-none text-white fs-1 fw-bolder'>
          NO MOVIES ARE SEARCHED YET
      </div>
      :

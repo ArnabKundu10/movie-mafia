@@ -36,7 +36,7 @@ export default function NavBar() {
         <HeadLink setIsHovered={setIsHovered}/>
         </div> 
         <div className="subbox align-self-center w-25">
-          <input className=' p-1 w-75 rounded mt-1 me-1' onFocus={handleFocus} onChange={handleChange} type="text" placeholder='Search Movies,Shows and More'/>
+          <input className='p-1 w-75 rounded mt-1 me-1' onFocus={handleFocus} onChange={handleChange} type="text" placeholder='Search Movies,Shows and More'/>
            <button  className='btn btn-danger fw-bold rounded p-1'>Search</button>
         </div>
       </div>    
