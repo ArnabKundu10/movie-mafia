@@ -10,6 +10,8 @@ import Horror from "./pages/Horror";
 import More from "./pages/More";
 import Search from "./pages/Search";
 import Footer from "./components/Footer";
+import News from "./pages/News";
+import NewsDetails from "./pages/NewsDetails";
 function App() {
   return (
     <>
@@ -19,10 +21,11 @@ function App() {
         <Route path="popular" element={<Popular />} />
         <Route path="action" element={<Action />} />
         <Route path="horror" element={<Horror />} />
-        <Route path="news" element={<Horror />} />
+        <Route path="news" element={<News />} />
         <Route path="more" element={<More />} />
         <Route path="search" element={<Search />} />
         <Route path="movie-details" element={<MovieDetails />} />
+        <Route path="news/news-details" element={<NewsDetails />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

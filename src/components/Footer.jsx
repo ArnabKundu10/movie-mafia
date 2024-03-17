@@ -1,7 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import "../assets/css/Footer.css"
+import { useAuth } from '../store/auth'
 export default function Footer() {
+  const{setcurhead}=useAuth();
   return (
     <div className='footer-container d-flex flex-column text-white'>
       <div className="footer-subcontainer d-flex justify-content-between">
@@ -9,17 +11,21 @@ export default function Footer() {
              <div className=' d-flex flex-column'>
               <p className='fs-5 fw-bolder'>Movie Category</p>
                <p>
-               <NavLink to="/" className="footer-link">For You</NavLink>
+               <NavLink to="/" onClick={()=>{setcurhead(0)}} className="footer-link">For You</NavLink>
                </p>
                <p>
-               <NavLink to="/popular" className="footer-link">Popular</NavLink>
+               <NavLink to="/popular" onClick={()=>{setcurhead(1)}} className="footer-link">Popular</NavLink>
                </p>
                <p>
-               <NavLink to="/horror" className="footer-link">Horror</NavLink>
+               <NavLink to="/horror" onClick={()=>{setcurhead(3)}} className="footer-link">Horror</NavLink>
                </p>
                <p>
-               <NavLink to="/action" className="footer-link">Action</NavLink>
+               <NavLink to="/action" onClick={()=>{setcurhead(2)}} className="footer-link">Action</NavLink>
                </p>
+               <p>
+               <NavLink to="/news" onClick={()=>{setcurhead(4)}} className="footer-link">News</NavLink>
+               </p>
+               
              </div>
              <div className='d-flex flex-column'>
              <p className='fs-5 fw-bolder'>Support</p>

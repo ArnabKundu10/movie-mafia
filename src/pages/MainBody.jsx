@@ -69,29 +69,29 @@ const responsive2 = {
 };
 
   return (
-    <div className='home-body'>
+    <div className='home-body '>
       <p>I am main Body</p>
       <div className='trending-trailers'>
        <Carousel responsive={responsive1} centerMode={true} keyBoardControl={true} infinite={true} ssr={true} 
-      swipeable={true}   customTransition="all .5" transitionDuration={500}containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
+      swipeable={true}   containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
       {trendTrailer?.map((item,index) => (
         <Trailers key={index}  item={item}/>      
       ))}
     </Carousel> 
     </div>
-    <div className='trending-movies'>
+    <div className='trending-movies pt-5 pb-5'>
     <p className='ms-2 text-white fw-bolder fs-5'>Trending Movies</p>
      <Carousel responsive={responsive2} keyBoardControl={true} ssr={true} 
-      swipeable={true}   customTransition="all .5" transitionDuration={500}containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
+      swipeable={true} customTransition="all 1s"   containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
       {popularMovie?.map((item,index) => (
         <ListPopular key={index} item={item}/>      
       ))}
     </Carousel> 
     </div>
-    <div className='top-100'>
+    <div className='top-100 pt-5 pb-5'>
     <p className='ms-2 text-white fw-bolder fs-5'>Top 100 Movies of All Time</p>
      <Carousel responsive={responsive2} keyBoardControl={true} ssr={true} 
-      swipeable={true}   customTransition="all .5" transitionDuration={500}containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
+      swipeable={true}   customTransition="all 1s" containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
       {topMovie?.map((item,index) => {
         if(index<100){
           return (<ListTop key={index} item={item}/> ) 
@@ -100,19 +100,19 @@ const responsive2 = {
         })}
     </Carousel> 
     </div>
-     <div className='biography'>
+     <div className='biography pt-5 pb-5'>
     <p className='ms-2 text-white fw-bolder fs-5'>Well Known Biographies</p>
      <Carousel responsive={responsive2} keyBoardControl={true} ssr={true} 
-      swipeable={true}   customTransition="all .5" transitionDuration={500} containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
+      swipeable={true}   customTransition="all 1s" containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
       {biographyMovie?.map((item,index) =>
      <ListBiography key={index} item={item}/>       
       )}
     </Carousel> 
     </div>
-    <div className='BoxOfficeTop'>
+    <div className='BoxOfficeTop pt-5 pb-5'>
     <p className='ms-2 text-white fw-bolder fs-5'>Best Box-Office Hits</p>
      <Carousel responsive={responsive2} keyBoardControl={true} ssr={true} 
-      swipeable={true}   customTransition="all .5" transitionDuration={500}containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
+      swipeable={true}   customTransition="all 1s" containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
       {boxOffice?.map((item,index) =>
      <ListBoxoffice key={index} item={item}/>       
       )}

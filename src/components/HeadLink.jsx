@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { useAuth } from '../store/auth'
 export default function HeadLink({setIsHovered}) {
-   const[curhead,setcurhead]=useState(0);
+   const{curhead,setcurhead}=useAuth();
    const bgheadlink=(index)=>{
 if(index===curhead){
    return {
