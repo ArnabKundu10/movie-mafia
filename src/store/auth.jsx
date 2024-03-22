@@ -16,6 +16,9 @@ export const AuthProvider=({children})=>{
    const [searchItem,setSearch] =useState("");
    const [movieNews,setMovieNews]=useState([]);
    const[celebNews,setCelebNews]=useState([]);
+   const[celebrities,setCelebrities]=useState([]);
+   const[upcomingItems,setUpcomingItems]=useState([]);
+   const[upcoming,setUpcoming]=useState("upcoming-movies");
    useEffect(()=>{ 
       const urltrailer = 'https://moviesverse1.p.rapidapi.com/get-trending-trailers';
       const urlpopular = 'https://moviesverse1.p.rapidapi.com/most-popular-movies';
@@ -27,7 +30,8 @@ export const AuthProvider=({children})=>{
       const urlgenre=`https://moviesverse1.p.rapidapi.com/get-by-genre?genre=${movieGenre}`;
       const urlmovienews="https://moviesverse1.p.rapidapi.com/get-movie-news";
       const urlcelebnews="https://moviesverse1.p.rapidapi.com/get-celebrities-news";
-
+      const urlcelebrities="https://moviesverse1.p.rapidapi.com/get-most-popular-celebrities";
+      const urlupcoming=`https://moviesverse1.p.rapidapi.com/${upcoming}`;
       const getTrailer=async()=>{    
   try {
     const response = await fetch(urltrailer,
@@ -212,6 +216,46 @@ export const AuthProvider=({children})=>{
         }
            
       }
+      const getUpcoming=async()=>{
+        try {
+          const response = await fetch(urlupcoming, {
+            method: 'GET',
+            headers: {
+               'X-RapidAPI-Key': 'fa6ad6c7acmshff0ce42a4cc0087p11b808jsnecfa297821ef',
+               'X-RapidAPI-Host': 'moviesverse1.p.rapidapi.com'
+            }
+         });
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          const data = await response.json();
+          setUpcomingItems(data.movies[0].list);
+        } catch (error) {
+          console.log(error);
+        }
+           
+      }
+      const getCelebrity=async()=>{
+        try {
+          const response = await fetch(urlcelebrities, {
+            method: 'GET',
+            headers: {
+               'X-RapidAPI-Key': 'fa6ad6c7acmshff0ce42a4cc0087p11b808jsnecfa297821ef',
+               'X-RapidAPI-Host': 'moviesverse1.p.rapidapi.com'
+            }
+         });
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          const data = await response.json();
+          setCelebrities(data.celebrities);
+        } catch (error) {
+          console.log(error);
+        }
+           
+      }
+  getCelebrity();
+  getUpcoming();    
   getCelebNews();
   getMovieNews();
   getGenre();
@@ -222,9 +266,9 @@ export const AuthProvider=({children})=>{
   getTop();
   getPopular();
   getTrailer();
-    },[movieGenre]);
+    },[movieGenre,upcoming]);
 return(
-   <AuthContext.Provider value={{itemDetails,setItemDetails,trendTrailer,popularMovie,topMovie,biographyMovie,actionMovie,horrorMovie,boxOffice,setGenre,movieGenre,movieGenreItems,searchItem,setSearch,movieNews,celebNews,newsitemDetails,setNewsItemDetails,curhead,setcurhead}}>
+   <AuthContext.Provider value={{itemDetails,setItemDetails,trendTrailer,popularMovie,topMovie,biographyMovie,actionMovie,horrorMovie,boxOffice,setGenre,movieGenre,movieGenreItems,searchItem,setSearch,movieNews,celebNews,newsitemDetails,setNewsItemDetails,curhead,setcurhead,setUpcoming,upcoming,upcomingItems,celebrities}}>
       {children}
    </AuthContext.Provider>
 )

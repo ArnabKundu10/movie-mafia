@@ -2,7 +2,7 @@ import React from 'react'
 import { useAuth } from '../store/auth';
 export default function MovieDetails() {
    const {itemDetails}=useAuth();
-  return (
+  return ( 
     <div className='movie-details'>
       <div className='main-movie-details d-flex rounded'> 
       <div className='movie-image-body'>

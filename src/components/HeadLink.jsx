@@ -34,7 +34,7 @@ else{
       <NavLink onClick={()=>{setcurhead(4)}} style={bgheadlink(4)} className="headlink pt-2 pb-3   ps-2 pe-2 fs-5 me-3" to="/news">
          News
       </NavLink>
-      <NavLink onClick={()=>{setcurhead(5)}} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} style={bgheadlink(5)} className="headlink pt-2 pb-3   ps-2 pe-2 fs-5 me-3" to="/more">
+      <NavLink onClick={()=>{setcurhead(5)}} onMouseEnter={() => setIsHovered(true)}  onMouseLeave={() => setIsHovered(false)} style={bgheadlink(5)} className="headlink pt-2 pb-3   ps-2 pe-2 fs-5 me-3" to="/more">
          More
       </NavLink>
     </>    

@@ -10,13 +10,14 @@
    overflow: hidden;
 }
 .popular-image{
-   object-fit: cover;
+   /* object-fit: cover; */
+   aspect-ratio: 1 / 1;
    height: 100%;
    width: 100%;
 }
 .popular-image:hover{
    opacity: 0.5;
-   box-shadow: 0 0 50px rgba(0,0,0,0.5);
+   box-shadow: 0 0 50px rgb(220, 53, 69,0.9);
 }
 .popular-image-container{
    position: relative;

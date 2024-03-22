@@ -4,13 +4,23 @@ padding-top: 5%;
 margin-right:7%; */
 }
 .news-details-img{
-   height: 60vh;
+   width: 100%;
+   height: 500px;
    z-index: 0; 
    text-align: center;
 }
 .news-details-img img{
-   display: block;
-   height: 100%;
+   height: 500px;
    width: 100%;
-   object-fit: cover;
+}
+.absolute-head-news ul li{
+   list-style: none !important;
+   cursor: pointer;
+}
+.absolute-head-news{
+   backdrop-filter: brightness(30%);
+   height: 500px;
+}
+.absolute-head-news ul{
+   padding-top: 15%; 
 }

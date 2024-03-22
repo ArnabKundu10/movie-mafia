@@ -3,15 +3,16 @@
 }
 .trailer-body{
    position: relative;
-   height: 750px;
+   height: 700px;
    z-index: 0; 
    width: 100%;
-   padding-left: 7%;
-   padding-right: 7%;
+   padding-left: 3%;
+   padding-right: 3%;
    padding-bottom: 25%;
    text-align: center;
 }
 .movie-details{
+   
 padding-top: 8%;
 margin-left: 7%;
 margin-right:7%;
@@ -49,11 +50,12 @@ margin-right:7%;
 }
 .normal-img:hover{
    opacity: 0.5;
-   box-shadow: 0 0 100px rgba(0, 0, 0, 0.6);
+   box-shadow: 0 0 50px rgb(220, 53, 69,0.9);
 }
 
 .normal-img{
    object-fit: cover;
+   /* aspect-ratio: 16 / 9; */
    height: 100%;
    width: 100%;
 }
@@ -83,3 +85,156 @@ font-size: 5.4rem;
    transform: scale(1.2); /* Adjust the scale factor based on your preference */
    transition: transform 0.3s ease-in-out;
  }
+ .react-multiple-carousel__arrow{
+   z-index: 5 !important;
+ }
+ .oscar-movie{
+   background: linear-gradient(to right,#021c2a,black,#021c2a);
+   padding-top: 5%;
+   padding-bottom: 5%;
+   position: relative;
+ }
+ .oscar-image{
+   
+padding-left: 2%;
+padding-right: 2%;
+/* width: 100%; */
+height: 400px;
+ }
+ .oscar-image img{
+   /* object-fit: cover; */
+   border-radius: 25px;
+   width: 100%;
+   height: 400px;
+   filter: drop-shadow(13px 13px 10px rgba(255, 0, 0, 0.303)) ;
+ }
+ .oscar-watch-btn{
+   display: block;
+   z-index: -1;
+   top: 50%;
+ }
+ .oscar-watch-btn button{
+   color: black;
+   background-color: white;
+ }
+ .oscar-watch-btn button:hover{
+   color: white;
+   background-color: rgb(220, 53, 69,0.9);
+ }
+ .oscar-movie:hover  .oscar-watch-btn{
+
+   animation-name: updown;
+   animation-fill-mode: forwards;
+   animation-delay: 0s;
+   animation-iteration-count: 1;
+   animation-duration: 1s;
+   z-index: 2 !important;
+ }
+ @keyframes updown {
+   0%{
+      display: none;
+   top: 50%;
+   transform: rotateX(360deg);
+   }
+   50%{
+   display: none;
+   top: 90%;
+   transform: rotateX(190deg);
+   }
+   70%{
+   display: block;
+   top: 95%;
+   transform: rotateX(180deg);
+   }
+   100%{
+      display: block;
+      top: 50%; 
+      transform: rotateX(0deg);
+   }
+ }
+ .react-multi-carousel-list{
+    overflow-block: visible !important; 
+ }
+ .normal-details{
+   display: none;
+  height: 500px;
+    width: 100%;
+   background-color: black;
+   color: white;
+   z-index: 3;
+   top: -100px;
+   left: -40%;
+}
+.normal-details div{
+   height: 400px;
+}
+.normal-details div img{
+   /* object-fit: cover; */
+   margin-top: 50%; 
+   height: 200px !important;
+   width: 100%;
+   /* mix-blend-mode:color-burn; */
+}
+ .normal-body:hover .normal-details{
+   display: flex;
+ }
+.list-item{
+   list-style-type:disc !important;
+} 
+.celeb-body:hover .normal-details{
+animation-name: zoomin;
+animation-duration: 0.5s;
+animation-fill-mode: forwards;
+}
+@keyframes zoomin {
+   0%{
+      top: 0px;
+      left: 0%;
+      height: 0px;
+      width: 0px;
+      opacity: 0;
+      box-shadow: 0 0 0px rgb(220, 53, 69,0.9);
+   }
+   100%{
+   top: -100px;
+   left: -23%;
+   height: 500px;
+   width: 300px;
+   opacity: 1;
+   box-shadow: 0 0 5px rgb(220, 53, 69,0.9);
+   }
+}
+.swiper-button-next, .swiper-button-prev{
+   background-color: transparent;
+   margin-top: -13%;
+   padding-top: 10%;
+   padding-bottom: 10%;
+   padding-left: 1.5%;
+   padding-right: 1.5%;
+   color: white !important;
+   /* border-radius: 40px; */
+   transition-property: background-color;
+   transition-duration: 0.3s;
+   transition-timing-function: ease-in-out;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover{
+   background-color: rgba(0, 0, 0, 0.6);
+}
+.swiper-slide{
+   scale: 1 !important;
+}
+.mySwiper{
+   padding-left: 5%;
+}
+.upcoming-title{
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+   border: 2px solid rgb(220, 53, 69,1);
+   border-right: none;
+}
+.upcoming-title-item:hover{
+  background-color: rgb(220, 53, 69,1) !important;
+}
+.upcoming-title-item:hover .fa-solid{
+   color: white !important;
+}

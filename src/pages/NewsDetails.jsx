@@ -1,11 +1,19 @@
 import React from 'react'
 import { useAuth } from '../store/auth'
 import "../assets/css/NewsDetails.css"
+import { useNavigate } from 'react-router-dom';
 export default function NewsDetails() {
    const {newsitemDetails}=useAuth();
+   const direct=useNavigate();
   return (
     <div className='news-details-body text-white'>
-      <div className='news-details-img'>
+      <div className='news-details-img position-relative'>
+         <div className='absolute-head-news position-absolute w-100'>
+            <ul className='d-flex fs-1 fw-bolder w-100 justify-content-center'>
+             <li onClick={()=>direct(-1)}>News <span className='text-danger'>{"->"}</span>  </li>
+             <li>NewsDetails</li>
+            </ul>
+         </div>
          <img src={newsitemDetails.image} alt="" />
       </div>
       <div className='ps-5 pe-5 ms-5 me-5 pt-5 pb-5'>
