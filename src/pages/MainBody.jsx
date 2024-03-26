@@ -107,7 +107,6 @@ const responsive5 = {
     slidesToSlide: 2,
   }
 };
-console.log(upcomingItems);
   return (
     <div className='home-body '>
       <p>I am main Body</p>
@@ -124,7 +123,7 @@ console.log(upcomingItems);
      <Carousel responsive={responsive2} keyBoardControl={true} ssr={true} 
       swipeable={true} customTransition="all 1s"   containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
       {popularMovie?.map((item,index) => (
-        <ListPopular key={index} item={item}/>      
+        <ListPopular key={index} parentDetails={popularMovie} item={item}/>      
       ))}
     </Carousel> 
     </div>
@@ -204,7 +203,7 @@ console.log(upcomingItems);
         <Carousel responsive={responsive5} keyBoardControl={true} ssr={true} 
       swipeable={true}   customTransition="all 1s" containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
       {upcomingItems?.map((item,index) =>
-     <ListUpComing key={index} item={item}/>       
+     <ListUpComing key={index} item={item.list[0]}/>       
       )}
     </Carousel>
         </div>

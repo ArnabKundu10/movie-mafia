@@ -229,7 +229,7 @@ export const AuthProvider=({children})=>{
             throw new Error("Network response was not ok");
           }
           const data = await response.json();
-          setUpcomingItems(data.movies[0].list);
+          setUpcomingItems(data.movies);
         } catch (error) {
           console.log(error);
         }

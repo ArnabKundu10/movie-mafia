@@ -7,8 +7,8 @@ export default function ListCeleb({item}) {
           <div className='text-center'>
             <img src={item.image} alt="" />
           </div>
-          <div className='pt-0 mt-0'>
-            <p className='mb-0 pt-0 mt-0 fw-bold fs-5'>{item.name}</p>
+          <div className='pt-0 mt-0 text-start'>
+            <p className='mb-0 pt-0 mt-0 fw-bold fs-5 text-center'>{item.name}</p>
             <p className='mb-0 fw-bold'>Industry Role (profession) </p>
             <ul>
               {item.professions?.map((role,i)=>{
@@ -20,7 +20,7 @@ export default function ListCeleb({item}) {
               })}
             </ul>
             <p><b>Known For:-</b>  {item.knownFor.title}</p>
-            <p><a href={item.knownFor.link} target='__blank'>Know More</a></p>
+            <p className='text-center'><a href={item.knownFor.link} className='know-more text-black bg-white fw-bolder p-1 rounded border border-2 border-danger' target='__blank'>Know More</a></p>
           </div>
         </div>
    <img className='normal-img rounded' src={item.image} alt=""/>  

@@ -16,6 +16,7 @@
 padding-top: 8%;
 margin-left: 7%;
 margin-right:7%;
+margin-bottom: 5%;
 }
 .main-movie-details{
    padding: 5% 4% 3% 4%;
@@ -237,4 +238,34 @@ animation-fill-mode: forwards;
 }
 .upcoming-title-item:hover .fa-solid{
    color: white !important;
+}
+.know-more{
+   box-shadow: 0 0 50px rgb(220, 53, 69,0.9);
+   text-decoration: none !important;
+   transition-duration: 0.2s;
+   transition-property: box-shadow;
+   transition-timing-function: ease-in-out;
+}
+.know-more:hover{
+   border: 0 !important;
+   box-shadow: 0 0 8px rgb(220, 53, 69,0.9);
+   background: linear-gradient(to right,white,white,black);
+}
+.movie-download{
+   padding: 2% 4% 3% 4%;
+   background-color: #01355072 !important;
+   box-shadow: 0px 0px 1000px #044365af;
+   backdrop-filter: brightness(10%);
+}
+.movie-download div {
+   width: 35%;
+}
+.movie-download div p{
+   transition-property: background-color,color;
+   transition-duration: 0.2s;
+   transition-timing-function: ease-out;
+}
+.movie-download div .download:hover{
+   background-color: white;
+   color: black !important;
 }
