@@ -40,4 +40,47 @@
    background-color: rgb(220, 53, 69,0.8);
    cursor:pointer;
 }
+.subbox p{
+   display: none;
+}
+.headAtEnd{
+   display: none;
+   position: fixed;
+   justify-content:space-around;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   z-index: 9;
+   padding-top: 3%;
+   padding-bottom: 2%;
+}
+/* ***************************mobile responsive************************************************* */
 
+
+@media screen and (max-width:740px){
+.navbox-first{
+   display: none ;
+}
+.navbox-second div:nth-child(2){
+ display: none;
+}
+.navbox-second div:nth-child(3){
+   width: 50% !important;
+  }
+  .subbox input{
+   width: 50% !important;
+  }
+  .subbox p{
+   display: block;
+  }
+  .gradient-text{
+   display: none;
+  }
+  .navbox-second div:nth-child(1){
+   border: 0;
+  }
+  .headAtEnd{
+   display: flex;
+  }
+}
