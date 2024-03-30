@@ -43,7 +43,7 @@ export default function NavBar() {
         </div>
       </div>    
     </div>
-    {isHovered && (<div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className='bg-black text-white rounded more-box position-fixe pb-2 pt-5'>
+    {isHovered && (<div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className='bg-black text-white rounded more-box position-fix pb-2 pt-5'>
     <ul className='d-flex flex-wrap fw-bolder'>
      <li className='rounded' onClick={()=>{setGenre("thriller");direct("more")}}>Thriller</li>
      <li className='rounded' onClick={()=>{setGenre("sci-fi");direct("more")}}>Sci-fi</li>
