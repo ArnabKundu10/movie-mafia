@@ -1,5 +1,5 @@
 .home-body{
-   padding-top: 70px;
+   padding-top: 120px;
 }
 .trailer-body{
    position: relative;
@@ -10,6 +10,25 @@
    padding-right: 3%;
    padding-bottom: 25%;
    text-align: center;
+}
+.trailer-img{
+   object-fit: cover;
+   height: 100%;
+   width: 100%;
+}
+.trailer-play{
+   display: none;
+padding-left: 30%;
+padding-top: 50%;
+font-size: 5.4rem;
+}
+.trailer-body:hover{
+   scale: 1.01;
+}
+.trailer-body:hover{
+   .trailer-play{
+      display: block;  
+   }
 }
 .movie-details{
    
@@ -60,25 +79,7 @@ margin-bottom: 5%;
    height: 100%;
    width: 100%;
 }
-.trailer-img{
-   object-fit: cover;
-   height: 100%;
-   width: 100%;
-}
-.trailer-play{
-   display: none;
-padding-left: 30%;
-padding-top: 50%;
-font-size: 5.4rem;
-}
-.trailer-body:hover{
-   scale: 1.01;
-}
-.trailer-body:hover{
-   .trailer-play{
-      display: block;  
-   }
-}
+
 .watch-trailer{
    margin-left: -7%;
 }
@@ -268,4 +269,28 @@ animation-fill-mode: forwards;
 .movie-download div .download:hover{
    background-color: white;
    color: black !important;
+}
+@media screen and (max-width:740px) {
+   .home-body{
+      padding-top: 80px;
+   }
+   .trailer-body{
+      height: 400px;
+   }
+   .trailer-body:hover{
+      .trailer-play{
+         display: none !important;  
+      }
+   }
+   .trailer-body p,.normal-body p{
+      font-size: 1rem !important;
+   }
+   .swiper-button-next, .swiper-button-prev{
+      display: none !important;
+   }
+   .oscar-watch-btn{
+      display: block !important;
+      animation-name: none !important;
+      z-index: 2;
+   }
 }

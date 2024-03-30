@@ -7,7 +7,7 @@
    background-clip: text;
    color: transparent; /* Make the text transparent so that the gradient background shows through */ 
 }
-.headlink{
+.headlink,.headlink-foot{
    text-decoration: none !important;
    color: white;
 }
@@ -24,7 +24,7 @@
    border-image-slice: 1;
 }
 .more-box{
-   z-index: 8;
+   z-index: 10;
    margin-top: 90px;
    width: 35%;
    left: 50%;
@@ -52,8 +52,7 @@
    background-color: black;
    color: white;
    z-index: 9;
-   padding-top: 3%;
-   padding-bottom: 2%;
+   font-size: 1rem !important;
 }
 /* ***************************mobile responsive************************************************* */
 
@@ -82,5 +81,12 @@
   }
   .headAtEnd{
    display: flex;
+  }
+  .mob-footer{
+   opacity: 0.5 ;
+   padding-top: 3%;
+   transition: opacity 1s ease-out;
+   width: 20%;
+   text-align: center;
   }
 }

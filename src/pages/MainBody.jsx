@@ -15,10 +15,20 @@ import ListBiography from '../components/ListBiography';
 import ListBoxoffice from '../components/ListBoxoffice';
 import ListCeleb from '../components/ListCeleb';
 import ListUpComing from '../components/ListUpComing';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 export default function MainBody() {
   const {trendTrailer,popularMovie,topMovie,biographyMovie,boxOffice,celebrities,upcomingItems,setUpcoming}=useAuth();
   const[selectUpcoming,setSelectUpcoming]=useState(0);
+  const[spv,setSpv] = useState(null);
+  useEffect(()=>{
+    const updateWindowWidth=()=>{
+      window.innerWidth>740 ? setSpv(6) :setSpv(3);
+    }  
+    window.addEventListener('resize', updateWindowWidth);
+    return () => {
+      window.removeEventListener('resize', updateWindowWidth);
+    };
+  },[]);
   const styleUpcoming=(index)=>{
    if (index===selectUpcoming) {
     return{
@@ -71,15 +81,14 @@ const responsive2 = {
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 5,
-    centerMode: true,
+    items: 3,
+    partialVisibilityGutter: 30,
     slidesToSlide: 4,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 5,
-    centerMode: true,
-    slidesToSlide: 4,
+    items: 2,
+    partialVisibilityGutter: 20 ,
   }
 };
 const responsive5 = {
@@ -96,23 +105,20 @@ const responsive5 = {
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 5,
-    centerMode: true,
+    items: 3,
     slidesToSlide: 2,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 5,
-    centerMode: true,
-    slidesToSlide: 2,
+    items: 2,
+    partialVisibilityGutter: 20,
   }
 };
   return (
     <div className='home-body '>
-      <p>I am main Body</p>
       <div className='trending-trailers'>
        <Carousel responsive={responsive1} centerMode={true} keyBoardControl={true} infinite={true} ssr={true} 
-      swipeable={true}   containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
+      swipeable={true} customTransition="all 1s" containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
       {trendTrailer?.map((item,index) => (
         <Trailers key={index}  item={item}/>      
       ))}
@@ -120,7 +126,7 @@ const responsive5 = {
     </div>
     <div className='trending-movies pt-5 pb-5'>
     <p className='ms-2 text-white fw-bolder fs-4'>Trending Movies</p>
-     <Carousel responsive={responsive2} keyBoardControl={true} ssr={true} 
+     <Carousel responsive={responsive2} partialVisible={true} keyBoardControl={true} ssr={true} 
       swipeable={true} customTransition="all 1s"   containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
       {popularMovie?.map((item,index) => (
         <ListPopular key={index} parentDetails={popularMovie} item={item}/>      
@@ -129,7 +135,7 @@ const responsive5 = {
     </div>
     <div className='top-100 pt-5 pb-5'>
     <p className='ms-2 text-white fw-bolder fs-4'>Top 100 Movies of All Time</p>
-     <Carousel responsive={responsive2} keyBoardControl={true} ssr={true} 
+     <Carousel responsive={responsive2} partialVisible={true} keyBoardControl={true} ssr={true} 
       swipeable={true}   customTransition="all 1s" containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
       {topMovie?.map((item,index) => {
         if(index<100){
@@ -153,8 +159,9 @@ const responsive5 = {
     <div className='movie-stars pt-5 '>
     <p className='ms-2 text-white fw-bolder fs-4'>Your Favorite Movie Stars</p>
     <Swiper
-        slidesPerView={6}
+        slidesPerView={`${spv}`}
         freeMode={true}
+        centeredSlides={true}
         navigation={true}
         modules={[Navigation,FreeMode]}
         className="mySwiper mb-0 pb-0"
@@ -170,7 +177,7 @@ const responsive5 = {
       </div>
     <div className='biography pt-5 pb-5'>
     <p className='ms-2 text-white fw-bolder fs-4'>Well Known Biographies</p>
-     <Carousel responsive={responsive2} keyBoardControl={true} ssr={true} 
+     <Carousel responsive={responsive2} partialVisible={true} keyBoardControl={true} ssr={true} 
       swipeable={true}   customTransition="all 1s" containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
       {biographyMovie?.map((item,index) =>
      <ListBiography key={index} item={item}/>       
@@ -179,7 +186,7 @@ const responsive5 = {
     </div>
     <div className='BoxOfficeTop pt-5 pb-5'>
     <p className='ms-2 text-white fw-bolder fs-4'>Best Box-Office Hits</p>
-     <Carousel responsive={responsive2} keyBoardControl={true} ssr={true} 
+     <Carousel responsive={responsive2} partialVisible={true} keyBoardControl={true} ssr={true} 
       swipeable={true}   customTransition="all 1s" containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
       {boxOffice?.map((item,index) =>
      <ListBoxoffice key={index} item={item}/>       
@@ -200,7 +207,7 @@ const responsive5 = {
           </div>
         </div>
         <div className='w-75'>
-        <Carousel responsive={responsive5} keyBoardControl={true} ssr={true} 
+        <Carousel responsive={responsive5} partialVisible={true} keyBoardControl={true} ssr={true} 
       swipeable={true}   customTransition="all 1s" containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
       {upcomingItems?.map((item,index) =>
      <ListUpComing key={index} item={item.list[0]}/>       
