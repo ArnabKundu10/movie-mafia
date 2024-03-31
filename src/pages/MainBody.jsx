@@ -19,7 +19,7 @@ import { useEffect, useState } from 'react';
 export default function MainBody() {
   const {trendTrailer,popularMovie,topMovie,biographyMovie,boxOffice,celebrities,upcomingItems,setUpcoming}=useAuth();
   const[selectUpcoming,setSelectUpcoming]=useState(0);
-  const[spv,setSpv] = useState(null);
+  const[spv,setSpv] = useState(window.innerWidth>740 ? 6 :3);
   useEffect(()=>{
     const updateWindowWidth=()=>{
       window.innerWidth>740 ? setSpv(6) :setSpv(3);
@@ -156,7 +156,7 @@ const responsive5 = {
       <img  src="https://www.oppenheimer.mx/meta/meta-v3-es_MX.jpg" alt="" />
       </div>
     </div>
-    <div className='movie-stars pt-5 '>
+    <div className='movie-stars pt-5'>
     <p className='ms-2 text-white fw-bolder fs-4'>Your Favorite Movie Stars</p>
     <Swiper
         slidesPerView={`${spv}`}
