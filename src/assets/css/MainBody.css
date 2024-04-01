@@ -293,4 +293,33 @@ animation-fill-mode: forwards;
       animation-name: none !important;
       z-index: 2;
    }
+   .main-movie-details{
+      flex-direction: column
+   }
+   .movie-image-body,.movie-others-body{
+      width: auto;
+   }
+   .movie-image-body{
+      margin-right: 0%;
+   }
+   .movie-details{
+      margin: 0%;
+      word-wrap: break-word;
+   }
+   .movie-download{
+      justify-content: center !important;
+   }
+   .movie-download div{
+      width: auto !important;
+      text-align: justify;
+   }
+   .download{
+      padding: 0.7rem !important;
+   }
+   .movie-download :nth-child(1){
+      margin-right: 3%;
+   }
+   .footer-link{
+      opacity: 1;
+   }
 }

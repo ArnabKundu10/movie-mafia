@@ -29,6 +29,9 @@ else{
    }
 }
    }
+   const toDifferentPage=()=>{
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+   }
   return (
     <>
     <div className='navbar d-flex text-center flex-column position-fixed w-100 pt-0'>
@@ -72,7 +75,7 @@ else{
     </ul>
    </div>)}
    <div className='headAtEnd'>  
-      <div className='d-flex flex-column mob-footer' style={headfootlink(0)} onClick={()=>{setHeadFoot(0);direct("/")}}> 
+      <div className='d-flex flex-column mob-footer' style={headfootlink(0)} onClick={()=>{setHeadFoot(0);toDifferentPage();direct("/")}}> 
         <p className='pb-0 mb-0 text-center'>
         <i className="fa-solid fa-house fs-3"></i>
         </p>
@@ -81,7 +84,7 @@ else{
         </NavLink>
         </div>
          </div>
-     <div className='d-flex flex-column mob-footer' style={headfootlink(1)} onClick={()=>{setHeadFoot(1);direct("/popular")}}>
+     <div className='d-flex flex-column mob-footer' style={headfootlink(1)} onClick={()=>{setHeadFoot(1);toDifferentPage();direct("/popular")}}>
      <p className='pb-0 mb-0 text-center'>
      <i className="fa-solid fa-fire fs-3"></i>
         </p>
@@ -90,7 +93,7 @@ else{
       </NavLink>
       </div>
        </div>
-     <div className='d-flex flex-column mob-footer' style={headfootlink(2)} onClick={()=>{setHeadFoot(2);direct("/action")}}>
+     <div className='d-flex flex-column mob-footer' style={headfootlink(2)} onClick={()=>{setHeadFoot(2);toDifferentPage();direct("/action")}}>
      <p className='pb-0 mb-0 text-center'>
         <i className="fa-solid fa-bolt fs-3"></i>
         </p>
@@ -108,7 +111,7 @@ else{
       </NavLink>
       </div>
        </div> */}
-     <div className='d-flex flex-column mob-footer' style={headfootlink(3)} onClick={()=>{setHeadFoot(3);direct("/news")}}> 
+     <div className='d-flex flex-column mob-footer' style={headfootlink(3)} onClick={()=>{setHeadFoot(3);toDifferentPage();direct("/news")}}> 
      <p className='pb-0 mb-0 text-center'>
         <i className="fa-regular fa-newspaper fs-3"></i>
         </p>
@@ -117,7 +120,7 @@ else{
       </NavLink> 
       </div>
       </div>
-     <div className='d-flex flex-column mob-footer' style={headfootlink(4)} onClick={()=>{setHeadFoot(4);direct("/more")}}>
+     <div className='d-flex flex-column mob-footer' style={headfootlink(4)} onClick={()=>{setHeadFoot(4);toDifferentPage();direct("/more")}}>
      <p className='pb-0 mb-0 text-center'>
         <i className="fa-solid fa-ellipsis fs-3"></i>
         </p>

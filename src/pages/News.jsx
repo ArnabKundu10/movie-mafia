@@ -15,7 +15,7 @@ export default function News() {
     direct("news-details");
   }
   return (
-    <div className='News-body' style={{paddingTop:"10%"}}>
+    <div className='News-body'>
       <div className='container celebrity-news'>
         <p className='fs-1 fw-bolder text-center text-white'>All Recent <span className='text-danger'>H</span>ot News and Activities of World <span className='text-danger'>M</span>ovies, Shows & More</p>
         <Swiper effect={'coverflow'}
@@ -26,7 +26,7 @@ export default function News() {
           enabled: true,
         }}
         loop={true}
-        slidesPerView={'auto'}
+        slidesPerView={2}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
@@ -72,7 +72,7 @@ export default function News() {
           enabled: true,
         }}
         loop={true}
-        slidesPerView={'auto'}
+        slidesPerView={2}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,

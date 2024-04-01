@@ -19,15 +19,14 @@ export default function MovieDetails() {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 5,
-      centerMode: true,
+      items: 3,
+      partialVisibilityGutter: 30,
       slidesToSlide: 4,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 5,
-      centerMode: true,
-      slidesToSlide: 4,
+      items: 2,
+      partialVisibilityGutter: 20 ,
     }
   };
   return ( 
@@ -63,7 +62,7 @@ export default function MovieDetails() {
       </div>
       <div className='trending-movies pt-5 pb-5'>
     <p className='ms-2 text-white fw-bolder fs-4'>Simillar Movies Like This</p>
-     <Carousel responsive={responsive2} keyBoardControl={true} ssr={true} 
+     <Carousel responsive={responsive2} partialVisible={true} keyBoardControl={true} ssr={true} 
       swipeable={true} customTransition="all 1s"   containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >
       {popularMovie?.map((item,index) => (
         <SimillarMovies key={index} parentDetails={popularMovie} item={item}/>      

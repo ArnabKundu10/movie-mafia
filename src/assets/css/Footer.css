@@ -9,3 +9,6 @@ padding: 5% 8% 15% 8%;
    font-weight: bold;
    opacity: 0.8;
 }
+.footer-link:hover{
+   opacity: 1;
+}

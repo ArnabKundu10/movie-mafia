@@ -37,7 +37,7 @@ export default function Popular() {
           {totalContents?.map((item,index)=>{
             return(
             <div key={index} className='popular-image-container text-center'>
-                <img className='popular-image  rounded h-100' onClick={()=>getDetails(item)} src={item.image} alt="" />
+                <img className='popular-image h-100' onClick={()=>getDetails(item)} src={item.image} alt="" />
              <p className='text-center text-black bg-white fs-5 fw-bolder m-0 p-0' >{item.title} ({item.year})</p>
             </div>
             )
@@ -59,7 +59,7 @@ export default function Popular() {
             
           </ul>
             <div className='next-btn' >
-              <button className='p-2 m-1 fs-5 fw-bold ' onClick={nextPage} disabled={curPage===n}>next</button>
+              <button className='p-2 m-1 fs-5 fw-bold' onClick={nextPage} disabled={curPage===n}>next</button>
              </div>
              </div>
        </div>

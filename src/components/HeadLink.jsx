@@ -17,24 +17,27 @@ else{
    }
 }
    }
+      const toDifferentPage=()=>{
+         window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
   return (
     <>
-     <NavLink onClick={()=>{setcurhead(0)}} style={bgheadlink(0)} className="headlink pt-2 pb-3 ps-2 pe-2 fs-5 me-3" to="/">
+     <NavLink onClick={()=>{toDifferentPage();setcurhead(0)}} style={bgheadlink(0)} className="headlink pt-2 pb-3 ps-2 pe-2 fs-5 me-3" to="/">
         Home
         </NavLink>
-      <NavLink onClick={()=>{setcurhead(1)}} style={bgheadlink(1)} className="headlink pt-2 pb-3 ps-2 pe-2 fs-5 me-3" to="/popular">
+      <NavLink onClick={()=>{toDifferentPage();setcurhead(1)}} style={bgheadlink(1)} className="headlink pt-2 pb-3 ps-2 pe-2 fs-5 me-3" to="/popular">
          Popular
       </NavLink>
-      <NavLink onClick={()=>{setcurhead(2)}} style={bgheadlink(2)} className="headlink pt-2 pb-3 ps-2 pe-2  fs-5 me-3" to="/action">
+      <NavLink onClick={()=>{toDifferentPage();setcurhead(2)}} style={bgheadlink(2)} className="headlink pt-2 pb-3 ps-2 pe-2  fs-5 me-3" to="/action">
          Action
       </NavLink>
-      <NavLink onClick={()=>{setcurhead(3)}} style={bgheadlink(3)} className="headlink pt-2 pb-3   ps-2 pe-2 fs-5 me-3" to="/horror">
+      <NavLink onClick={()=>{toDifferentPage();setcurhead(3)}} style={bgheadlink(3)} className="headlink pt-2 pb-3   ps-2 pe-2 fs-5 me-3" to="/horror">
          Horror
       </NavLink>
-      <NavLink onClick={()=>{setcurhead(4)}} style={bgheadlink(4)} className="headlink pt-2 pb-3   ps-2 pe-2 fs-5 me-3" to="/news">
+      <NavLink onClick={()=>{toDifferentPage();setcurhead(4)}} style={bgheadlink(4)} className="headlink pt-2 pb-3   ps-2 pe-2 fs-5 me-3" to="/news">
          News
       </NavLink>
-      <NavLink onClick={()=>{setcurhead(5)}} onMouseEnter={() => setIsHovered(true)}  onMouseLeave={() => setIsHovered(false)} style={bgheadlink(5)} className="headlink pt-2 pb-3 ps-2 pe-2 fs-5 me-3" to="/more">
+      <NavLink onClick={()=>{toDifferentPage();setcurhead(5)}} onMouseEnter={() => setIsHovered(true)}  onMouseLeave={() => setIsHovered(false)} style={bgheadlink(5)} className="headlink pt-2 pb-3 ps-2 pe-2 fs-5 me-3" to="/more">
          More <i class="fa-solid fa-chevron-down"></i>
       </NavLink>
     </>    

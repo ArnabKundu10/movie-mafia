@@ -44,4 +44,9 @@ background-color: rgba(0, 0, 0, 0.556);
 .swiper-slide-active{
   scale: 1.1;
 }
+@media screen and (max-width:740px) {
+  .News-body{
+    padding-top: 15%;
+  }
+}
  

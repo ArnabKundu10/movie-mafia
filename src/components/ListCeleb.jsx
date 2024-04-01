@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 export default function ListCeleb({item}) {
   const [details,setDetails]=useState(false);
 //  const detailsFunc=()=>{
@@ -13,9 +13,7 @@ export default function ListCeleb({item}) {
 //       }
 //   }
 //  }
-useEffect(()=>{
-console.log(details);
-},[details])
+
   return (
    <div className='normal-body celeb-body' onMouseEnter={()=>setDetails(true)}  onMouseLeave={()=>setDetails(false)} onClick={()=>setDetails(true)}>
         {details && 
