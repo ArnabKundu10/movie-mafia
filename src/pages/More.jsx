@@ -19,15 +19,15 @@ export default function More() {
       },
       tablet: {
         breakpoint: { max: 1024, min: 464 },
-        items: 7,
+        items: 5,
         centerMode: true,
         slidesToSlide: 5,
       },
       mobile: {
         breakpoint: { max: 464, min: 0 },
-        items: 5,
+        items: 4,
         centerMode: true,
-        slidesToSlide: 5,
+        slidesToSlide: 4,
       }
     };
   const {movieGenreItems,movieGenre,setItemDetails,setGenre}=useAuth();
@@ -62,7 +62,7 @@ export default function More() {
       <div className='popular-body text-center'>
          <div className='movie-genre'>
      <Carousel responsive={responsive3} keyBoardControl={true} ssr={true} 
-      swipeable={true}   customTransition="all .5" transitionDuration={500}containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >    
+      swipeable={true}    customTransition="all 1s"  transitionDuration={500}containerClass="carousel-container" removeArrowOnDeviceType={["tablet", "mobile"]} >    
          <button onClick={()=>setGenre("thriller")} className=' carausel-btn bg-transparent text-white  fw-bolder ps-2 p-2 rounded '>Thriller</button> 
          <button onClick={()=>setGenre("sci-fi")} className=' carausel-btn bg-transparent text-white  fw-bolder ps-2 p-2 rounded '>Sci-fi</button> 
          <button onClick={()=>setGenre("romance")} className=' carausel-btn bg-transparent text-white  fw-bolder ps-2 p-2 rounded '>Romance</button> 

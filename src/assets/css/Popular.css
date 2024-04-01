@@ -49,6 +49,7 @@
 }
 .carausel-btn{
    border: 2px solid white;
+   word-wrap: break-word;
 }
 .carausel-btn:hover{
    background-color: white !important;
@@ -73,5 +74,8 @@ grid-column-end: 5;
   }
   .popular-image-container p{
    font-size: 1rem !important;
+  }
+  .movie-genre{
+   padding-top: 25%;
   }
 }

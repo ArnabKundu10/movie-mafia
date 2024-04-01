@@ -53,6 +53,7 @@
    color: white;
    z-index: 9;
    font-size: 1rem !important;
+   overflow-x: hidden;
 }
 /* ***************************mobile responsive************************************************* */
 

@@ -6,6 +6,8 @@ export default function ListTop({item}) {
   const direct=useNavigate();
 const getDetails=(item)=>{
  setItemDetails(item);
+ window.scrollTo({top:0,behavior:"smooth"});
+ direct("/movie-details");
 direct("/movie-details");
 }
   return (

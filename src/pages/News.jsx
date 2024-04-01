@@ -12,6 +12,7 @@ export default function News() {
   const direct=useNavigate();
   const getNewsdetails =(item)=>{
     setNewsItemDetails(item);
+    window.scrollTo({top:0,behavior:"smooth"});
     direct("news-details");
   }
   return (

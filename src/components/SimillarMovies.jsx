@@ -7,6 +7,7 @@ export default function SimillarMovies({item}) {
    const direct=useNavigate();
  const getDetails=(item)=>{
   setItemDetails(item);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
  direct("/movie-details");
  }
   return (

@@ -6,7 +6,8 @@ export default function ListBoxoffice({item}) {
   const direct=useNavigate();
   const getDetails=(item)=>{
     setItemDetails(item);
-   direct("/movie-details");
+    window.scrollTo({top:0,behavior:"smooth"});
+    direct("/movie-details");
    }
   return (
    <div className='normal-body'>
