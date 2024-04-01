@@ -13,7 +13,7 @@ export default function NewsDetails() {
              <li onClick={()=>direct(-1)}>News <span className='text-danger'>{"->"}</span>  </li>
              <li>NewsDetails</li>
             </ul>
-         </div>
+         </div> 
          <img src={newsitemDetails.image} alt="" />
       </div>
       <div className='ps-5 pe-5 ms-5 me-5 pt-5 pb-5'>
