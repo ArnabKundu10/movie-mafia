@@ -1,6 +1,7 @@
 .navbar{
    z-index: 10;
    background-color: black;
+   overflow-x: hidden !important;
 }
 .gradient-text{
    background: linear-gradient(to right,white, goldenrod, goldenrod); /* Replace these colors with your desired gradient stops */

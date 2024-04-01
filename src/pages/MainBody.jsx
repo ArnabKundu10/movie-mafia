@@ -193,7 +193,7 @@ const responsive5 = {
       )}
     </Carousel> 
     </div> 
-    <div className='pt-5 pb-5 text-white'>
+    <div className='pt-5 pb-5 text-white upcomingall'>
       <p className='ms-2 fw-bolder fs-4'>UpComing Movies & TV Shows</p>
       <div className='d-flex justify-content-center'>
         <div className='d-flex w-25 justify-content-around upcoming-title text-center flex-column ms-3'>

@@ -1,5 +1,9 @@
 .home-body{
    padding-top: 120px;
+   overflow-x: hidden;
+}
+.trending-trailers,.top-100,.oscar-movie,.movie-stars,.biography,.BoxOfficeTop,.upcomingall{
+   overflow-x: hidden !important;
 }
 .trailer-body{
    position: relative;
@@ -318,8 +322,5 @@ animation-fill-mode: forwards;
    }
    .movie-download :nth-child(1){
       margin-right: 3%;
-   }
-   .footer-link{
-      opacity: 1;
    }
 }
