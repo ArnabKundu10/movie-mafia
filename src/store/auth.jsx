@@ -20,17 +20,17 @@ export const AuthProvider=({children})=>{
    const[upcomingItems,setUpcomingItems]=useState([]);
    const[upcoming,setUpcoming]=useState("upcoming-movies");
    useEffect(()=>{ 
-      const urltrailer = 'https://moviesverse1.p.rapidapi.com/get-trending-trailers';
-      const urlpopular = 'https://moviesverse1.p.rapidapi.com/most-popular-movies';
-      const urltophundred='https://moviesverse1.p.rapidapi.com/top-250-movies';
-      const urlbiography='https://moviesverse1.p.rapidapi.com/get-by-genre?genre=biography';
-      const urlaction='https://moviesverse1.p.rapidapi.com/get-by-genre?genre=action';
-      const urlhorror='https://moviesverse1.p.rapidapi.com/get-by-genre?genre=horror';
-      const urlboxoffice='https://moviesverse1.p.rapidapi.com/top-box-office';
-      const urlgenre=`https://moviesverse1.p.rapidapi.com/get-by-genre?genre=${movieGenre}`;
-      const urlmovienews="https://moviesverse1.p.rapidapi.com/get-movie-news";
-      const urlcelebnews="https://moviesverse1.p.rapidapi.com/get-celebrities-news";
-      const urlcelebrities="https://moviesverse1.p.rapidapi.com/get-most-popular-celebrities";
+      const urltrailer = 'https://moviesverse1.p.rapidapi.com/upcoming-movies';
+      const urlpopular = 'https://moviesverse1.p.rapidapi.com/most-trending-movies';
+      const urltophundred='https://moviesverse1.p.rapidapi.com/top-movies-of-all-time';
+      const urlbiography='https://moviesverse1.p.rapidapi.com/movies-by-genre?genre=biography';
+      const urlaction='https://moviesverse1.p.rapidapi.com/movies-by-genre?genre=action';
+      const urlhorror='https://moviesverse1.p.rapidapi.com/movies-by-genre?genre=horror';
+      const urlboxoffice='https://moviesverse1.p.rapidapi.com/top-box-office-movies';
+      const urlgenre=`https://moviesverse1.p.rapidapi.com/movies-by-genre?genre=${movieGenre}`;
+      const urlmovienews="https://moviesverse1.p.rapidapi.com/movie-news";
+      const urlcelebnews="https://moviesverse1.p.rapidapi.com/celebrities-news";
+      const urlcelebrities="https://moviesverse1.p.rapidapi.com/popular-celebrities";
       const urlupcoming=`https://moviesverse1.p.rapidapi.com/${upcoming}`;
       const getTrailer=async()=>{    
   try {
@@ -46,7 +46,7 @@ export const AuthProvider=({children})=>{
       throw new Error("Network response was not ok");
     }
     const data = await response.json();
-    setTrailer(data.trailers);
+    setTrailer(data.movies);
   } catch (error) {
     console.log(error);
   }

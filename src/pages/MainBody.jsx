@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import { FreeMode, Navigation} from 'swiper/modules';
 import "../assets/css/MainBody.css";
+import Oppenheimer from "../assets/pictures/Oppenheimer.jpg"
 import { useAuth } from '../store/auth';
 import Trailers from '../components/Trailers';
 import ListPopular from '../components/ListPopular';
@@ -153,7 +154,7 @@ const responsive5 = {
       </div>
       <p className='ms-2 text-white fw-bolder fs-3'>Watch 7 Academy Awards Winning Movie Oppenheimer</p>
       <div className='oscar-image'>
-      <img  src="https://www.oppenheimer.mx/meta/meta-v3-es_MX.jpg" alt="" />
+      <img  src={Oppenheimer} alt="" />
       </div>
     </div>
     <div className='movie-stars pt-5'>
@@ -201,7 +202,7 @@ const responsive5 = {
             <p><i className="fa-solid fa-clapperboard fs-1 " style={{color : selectUpcoming===0? "white":"rgb(220, 53, 69,1)"}}></i></p>
             <p>Upcoming Movies</p>
           </div>
-          <div onClick={()=>{setUpcoming("upcoming-tv-shows");setSelectUpcoming(1)}} style={styleUpcoming(1)}  className='upcoming-title-item fw-bold fs-5 pt-4 pb-4' >
+          <div onClick={()=>{setUpcoming("upcoming-movies");setSelectUpcoming(1)}} style={styleUpcoming(1)}  className='upcoming-title-item fw-bold fs-5 pt-4 pb-4' >
             <p><i class="fa-solid fa-tv fs-1" style={{color : selectUpcoming===1? "white":"rgb(220, 53, 69,1)"}}></i></p>
            <p >Upcoming TV Shows</p> 
           </div>

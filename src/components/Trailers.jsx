@@ -10,9 +10,9 @@ export default function Trailers({item}) {
    <br />
    <p className='watch-trailer text-center text-white mt-0 fs-5 fw-bolder'>Watch Trailer</p>
    </div>
-  <img className='trailer-img rounded'  src={item.image} alt="" /></a>
+  <img className='trailer-img rounded'  src={item.list[0].image} alt="" /></a>
            
-   <p className='text-center text-white bg-danger fs-4 fw-bolder' >{item.title}</p>
+   <p className='text-center text-white bg-danger fs-4 fw-bolder' >{item.list[0].title}</p>
  </div>
   )
 }

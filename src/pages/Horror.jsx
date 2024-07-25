@@ -38,7 +38,7 @@ export default function Horror() {
           {totalContents?.map((item,index)=>{
             return(
             <div key={index} className='popular-image-container text-center'>
-                <img className='popular-image  rounded h-100' onClick={()=>getDetails(item)} src={item.posterImage} alt="" />
+                <img className='popular-image  rounded h-100' onClick={()=>getDetails(item)} src={item.image} alt="" />
              <p className='text-center text-black bg-white fs-5 fw-bolder m-0 p-0' >{item.title} ({item.year})</p>
             </div>
             )

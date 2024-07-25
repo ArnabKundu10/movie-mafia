@@ -17,7 +17,7 @@ export default function ListBiography({item}) {
    <br />
    <p className='watch-normal text-center text-white mt-0 fs-5 fw-bolder'>Watch normal</p>
    </div> */}
-   <img className='normal-img rounded' onClick={()=>getDetails(item)}  src={item.posterImage} alt=""/>  
+   <img className='normal-img rounded' onClick={()=>getDetails(item)}  src={item.image} alt=""/>  
     <p className='text-center text-black bg-white fs-5 fw-bolder' >{item.title}</p>
  </div>
   )
